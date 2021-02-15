@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import get from 'lodash/get';
+import { TextStyleVariants } from '../../foundation/Text';
 
 const ButtonGhost = css `
     background:transparent;
@@ -19,6 +20,7 @@ export const Button = styled.button `
     opacity:1;
 
     border-radius: 8px;
+    ${TextStyleVariants.smallestException}
     ${function (props){
         if(props.ghost){
             return ButtonGhost;           
