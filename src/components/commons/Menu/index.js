@@ -1,52 +1,49 @@
 import React from 'react';
 import { MenuWrapper } from './styles/MenuWrapper';
 import { Logo } from '../../../theme/Logo/index';
-import { Button} from '../Button/index';
+import { Button } from '../Button/index';
 import { Text } from '../../foundation/Text';
 
-export default function Menu(){
+export default function Menu() {
+  const links = [
+    {
+      texto: 'Home',
+      url: '/',
+    },
+    {
+      texto: 'Perguntas Frequentes',
+      url: '/faq',
+    },
+    {
+      texto: 'Sobre',
+      url: '/sobre',
+    },
+  ];
 
-    const links =  [
-        {
-            texto: 'Home',
-            url: '/'
-        },
-        {
-            texto: 'Perguntas Frequentes',
-            url: '/faq'
-        },
-        {
-            texto: 'Sobre',
-            url: '/sobre'
-        }
-    ]
-
-  return(
+  return (
     <MenuWrapper>
-        <MenuWrapper.LeftSide>
-          <Logo />          
-        </MenuWrapper.LeftSide>
+      <MenuWrapper.LeftSide>
+        <Logo />
+      </MenuWrapper.LeftSide>
 
-        <MenuWrapper.CentralSide>
-          {links.map(function(link, ){
-            return(
-                <li key={link.url}>
-                    <Text tag="a" variant="smallestException" href={link.url}>{link.texto}</Text>
-                </li>
-            )   
-          })}
-        </MenuWrapper.CentralSide>
+      <MenuWrapper.CentralSide>
+        {links.map((link) => (
+          <li key={link.url}>
+            <Text tag="a" variant="smallestException" href={link.url}>{link.texto}</Text>
+          </li>
+        ))}
+      </MenuWrapper.CentralSide>
 
-        <MenuWrapper.RightSide>     
-          <Button ghost variant="primary.main">
-              Entrar
-          </Button>
-          <Button variant="secondary.main">
-              Cadastrar
-          </Button>
-        </MenuWrapper.RightSide>
+      <MenuWrapper.RightSide>
+        <Button ghost variant="primary.main">
+          Entrar
+        </Button>
+        <Button variant="secondary.main">
+          Cadastrar
+        </Button>
+      </MenuWrapper.RightSide>
 
     </MenuWrapper>
-   
-  )
+
+  );
 }

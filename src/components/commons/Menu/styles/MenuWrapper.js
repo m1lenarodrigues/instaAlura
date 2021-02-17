@@ -1,9 +1,9 @@
-import  styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
 import { TextStyleVariants } from '../../../foundation/Text';
-import { css } from 'styled-components';
 
-export const MenuWrapper = styled.nav `
+// eslint-disable-next-line import/prefer-default-export
+export const MenuWrapper = styled.nav`
     font-family: 'Rubik', sans-serif;
     display: flex;
     align-items: center;
@@ -14,7 +14,7 @@ export const MenuWrapper = styled.nav `
     padding-right: 28px;
 
     ${breakpointsMedia({
-      md: css`
+    md: css`
         justify-content: flex-start;
         margin-top: 32px;
         margin-left: auto;
@@ -23,13 +23,13 @@ export const MenuWrapper = styled.nav `
         padding: 0 16px;
         max-width: 768px;
       `,
-      lg: css`
+    lg: css`
         max-width: 1160px; 
       `,
-      xl: css`
+    xl: css`
         max-width: 1222px;
       `,
-    })} */
+  })} */
 `;
 
 MenuWrapper.LeftSide = styled.div`
@@ -72,13 +72,13 @@ MenuWrapper.CentralSide = styled.div`
       
     }
     ${breakpointsMedia({
-      xs: css`
+    xs: css`
           ${TextStyleVariants.smallestException}
       `,
-      md: css`
+    md: css`
         ${TextStyleVariants.paragraph1}
       `,
-    })}
+  })}
   }
   ${breakpointsMedia({
     md: css`

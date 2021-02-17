@@ -1,9 +1,8 @@
 import React from 'react';
 import get from 'lodash/get';
-import styled , { css } from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import { propToStyle } from '../../../theme/utils/propToStyle';
-import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 
 const paragraph1 = css`
   ${({ theme }) => css`
@@ -22,10 +21,9 @@ const smallestException = css`
 `;
 
 export const TextStyleVariants = {
-    smallestException,
-    paragraph1,
-  };
-
+  smallestException,
+  paragraph1,
+};
 
 const TextBase = styled.span`
     ${({ variant }) => TextStyleVariants[variant]}
@@ -34,24 +32,28 @@ const TextBase = styled.span`
     
   `;
 
-export function Text({ tag, variant, children, ...props }){
-    return(
-        <TextBase 
-            as = {tag}
-            variant = {variant}
-            {...props}>
-            {children}
-        </TextBase>
-    );
+export function Text({
+  tag, variant, children, ...props
+}) {
+  return (
+    <TextBase
+      as={tag}
+      variant={variant}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...props}
+    >
+      {children}
+    </TextBase>
+  );
 }
 
 Text.defaultProps = {
-    tag: 'span',
-    variant: 'paragraph1',
-  };
-  
-  Text.propTypes = {
-    children: PropTypes.node.isRequired,
-    tag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'li', 'a', 'span']),
-    variant: PropTypes.oneOf(['paragraph1', 'smallestException']),
-  }; 
+  tag: 'span',
+  variant: 'paragraph1',
+};
+
+Text.propTypes = {
+  children: PropTypes.node.isRequired,
+  tag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'li', 'a', 'span']),
+  variant: PropTypes.oneOf(['paragraph1', 'smallestException']),
+};

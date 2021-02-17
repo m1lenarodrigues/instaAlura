@@ -1,10 +1,12 @@
+/* eslint-disable func-names */
+/* eslint-disable import/prefer-default-export */
 import styled, { css } from 'styled-components';
 import get from 'lodash/get';
 import { TextStyleVariants } from '../../foundation/Text';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 import { propToStyle } from '../../../theme/utils/propToStyle';
 
-const ButtonGhost = css `
+const ButtonGhost = css`
     background:transparent;
     color: ${({ theme, variant }) => get(theme, `colors.${variant}.color`)};
     ${propToStyle('margin')}
@@ -17,7 +19,7 @@ const ButtonDefault = css`
 
   `;
 
-export const Button = styled.button `
+export const Button = styled.button`
     border :0;
     cursor:pointer;
     padding: 12px 26px;
@@ -28,24 +30,25 @@ export const Button = styled.button `
     ${TextStyleVariants.smallestException}
 
     ${breakpointsMedia({
-        xs: css`
+    xs: css`
           ${TextStyleVariants.smallestException}
         `,
-        md: css`
+    md: css`
           padding: 12px 43px;
           ${TextStyleVariants.paragraph1}
         `,
-      })}
+  })}
 
       ${propToStyle('margin')}
       ${propToStyle('display')}
       
-    ${function (props){
-        if(props.ghost){
-            return ButtonGhost;           
-        }    
-        return ButtonDefault;   
-    }};
+    // eslint-disable-next-line func-names
+    ${function (props) {
+    if (props.ghost) {
+      return ButtonGhost;
+    }
+    return ButtonDefault;
+  }};
     &:hover,
     &:focus{
         opacity: .5;
