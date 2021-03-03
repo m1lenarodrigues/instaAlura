@@ -1,15 +1,17 @@
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable no-param-reassign */
 import React from 'react';
 import Menu from '../src/components/commons/Menu';
 import Footer from '../src/components/commons/Footer';
 import { Button } from '../src/components/commons/Button';
-import { Text } from '../src/components/foundation/Text';
+import Text from '../src/components/foundation/Text';
 import { Grid } from '../src/components/foundation/layout/Grid';
 import { Box } from '../src/components/foundation/layout/Box';
 import Modal from '../src/components/commons/Modal';
+import FormCadastro from '../src/components/patterns/FormCadastro';
 
 export default function Home() {
-  const [isModalOpen, setModalOpen] = React.useState(false);
+  const [isModalOpen, setModalOpen] = React.useState(true);
 
   return (
     <Box
@@ -29,15 +31,7 @@ export default function Home() {
         }}
       >
         {(propsDoModal) => (
-          <Box
-            backgroundColor="white"
-            // eslint-disable-next-line react/jsx-props-no-spreading
-            {...propsDoModal}
-          >
-            <div>
-              Nosso conteúdo pro modal
-            </div>
-          </Box>
+          <FormCadastro propsDoModal={propsDoModal} />
         )}
 
       </Modal>

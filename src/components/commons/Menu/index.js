@@ -2,7 +2,7 @@ import React from 'react';
 import { MenuWrapper } from './styles/MenuWrapper';
 import { Logo } from '../../../theme/Logo/index';
 import { Button } from '../Button/index';
-import { Text } from '../../foundation/Text';
+import Text from '../../foundation/Text/index';
 
 export default function Menu() {
   const links = [

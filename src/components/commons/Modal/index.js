@@ -8,10 +8,10 @@ const ModalWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.1);
   position: fixed;
   top: 0;
-  left: 0;
+  left: 0; 
   right: 0;
   bottom: 0;
   margin: auto;
@@ -40,9 +40,9 @@ function Modal({ isOpen, onClose, children }) {
       onClick={(event) => {
         const isSafeArea = event.target.closest('[data-modal-safe-area="true"]');
 
-        if (!isSafeArea) {
-          onClose();
-        }
+        // if (!isSafeArea) {
+        //   onClose();
+        // }
       }}
     >
       <motion.div
@@ -56,9 +56,8 @@ function Modal({ isOpen, onClose, children }) {
         }}
         animate={isOpen ? 'open' : 'closed'}
         transition={{
-          duration: 0.4,
+          duration: 0.5,
         }}
-
         style={{
           display: 'flex',
           flex: 1,

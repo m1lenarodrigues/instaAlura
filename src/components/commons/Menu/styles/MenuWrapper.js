@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
-import { TextStyleVariants } from '../../../foundation/Text';
+import TextStyleVariants from '../../../foundation/Text';
 
 // eslint-disable-next-line import/prefer-default-export
 export const MenuWrapper = styled.nav`
