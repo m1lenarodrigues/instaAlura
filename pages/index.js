@@ -11,7 +11,7 @@ import Modal from '../src/components/commons/Modal';
 import FormCadastro from '../src/components/patterns/FormCadastro';
 
 export default function Home() {
-  const [isModalOpen, setModalOpen] = React.useState(true);
+  const [isModalOpen, setModalOpen] = React.useState(false);
 
   return (
     <Box
