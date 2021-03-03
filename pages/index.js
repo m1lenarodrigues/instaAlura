@@ -80,7 +80,6 @@ export default function Home() {
                 }}
                 display="block"
                 onClick={() => {
-                  console.log('entrou aki');
                   setModalOpen(!isModalOpen);
                 }}
               >
