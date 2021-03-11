@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
-import React from 'react';
 import { Lottie } from '@crello/react-lottie';
 import sucessoAnimation from './animations/sucesso.json';
 import erroAnimation from './animations/error.json';
