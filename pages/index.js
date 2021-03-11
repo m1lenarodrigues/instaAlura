@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable no-param-reassign */
-import React from 'react';
 import Menu from '../src/components/commons/Menu';
 import Footer from '../src/components/commons/Footer';
 import { Button } from '../src/components/commons/Button';
